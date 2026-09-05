@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F6F2EA;
+  color: #211D18;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #A8823D;
+  color: #F6F2EA;
+}
+
+:focus-visible {
+  outline: 2px solid #A8823D;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #A8823D 20%, #A8823D 80%, transparent);
+}
+
+.font-display {
+  font-optical-sizing: auto;
+}
+
+.field {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(33, 29, 24, 0.25);
+  padding: 0.75rem 1rem;
+  color: #211D18;
+  font-family: 'Work Sans', sans-serif;
+  transition: border-color 0.25s ease;
+}
+
+.field:focus {
+  border-color: #A8823D;
+}
+
+.field::placeholder {
+  color: rgba(33, 29, 24, 0.35);
+}
