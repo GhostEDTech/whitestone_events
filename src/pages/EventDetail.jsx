@@ -1,6 +1,7 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import MarbleVeins from "../components/MarbleVeins";
-import EventPlate from "../components/EventPlate";
+import EventImage from "../components/EventImage";
+import EventVideo from "../components/EventVideo";
 import { getPastEventBySlug, pastEvents } from "../data/pastEvents";
 
 export default function EventDetail() {
@@ -40,7 +41,14 @@ export default function EventDetail() {
               </p>
             ))}
           </div>
-          <EventPlate title={event.title} dark className="w-full aspect-[4/5]" />
+          <EventImage image={event.image} title={event.title} className="w-full aspect-[4/5]" />
+        </div>
+      </section>
+
+      <section className="bg-ivory pb-20">
+        <div className="max-w-6xl mx-auto px-6 md:px-10">
+          <p className="text-brass-deep text-sm mb-4">Event highlights</p>
+          <EventVideo video={event.video} title={event.title} className="w-full aspect-video" />
         </div>
       </section>
 

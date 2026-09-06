@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import MarbleVeins from "../components/MarbleVeins";
-import EventPlate from "../components/EventPlate";
+import EventImage from "../components/EventImage";
 import { pastEvents } from "../data/pastEvents";
 
 export default function PastEvents() {
@@ -28,7 +28,7 @@ export default function PastEvents() {
               key={event.slug}
               className="relative grid md:grid-cols-[220px_1fr] gap-6 md:gap-10 py-10 pb-20 md:pb-16 border-t border-charcoal/15 last:border-b"
             >
-              <EventPlate title={event.title} dark={i % 2 === 1} className="w-full aspect-[4/3] md:aspect-square" />
+              <EventImage image={event.image} title={event.title} className="w-full aspect-[4/3] md:aspect-square" />
 
               <div className="pr-0 md:pr-32">
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
